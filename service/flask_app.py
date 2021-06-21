@@ -15,12 +15,11 @@ def create_app():
         wind_api_blueprint = Blueprint("wind_api", __name__, url_prefix="/api")
         wind_api = flask_restful.Api(wind_api_blueprint, errors=errors)
 
-        # 
-        from api.waveform import WaveformAPI
-        wind_api.add_resource(WaveformAPI, "/waveforms")
+        ## 
+        from api.test import TestAPI
+        wind_api.add_resource(WaveformAPI, "/test")
         _app.register_blueprint(wind_api_blueprint)
     return _app
-
 
 if __name__ == "__main__":
     app = create_app(db_config.ProductionRemoteDBConfig)

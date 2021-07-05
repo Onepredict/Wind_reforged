@@ -4,10 +4,6 @@ import flask_restful
 def create_app():
     _app = Flask("flask_app")
 
-    @_app.route('/test_page')
-    def test_page():
-        return render_template('index.html')
-
     with _app.app_context():
 
         # from libs.logger import Logger, info

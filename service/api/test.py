@@ -9,8 +9,6 @@ class TestAPI(Resource):
         device_id = request.args.get('device_id')
         time_current = time.strftime('%y-%m-%d %H:%M:%S')
         res = f'''<!DOCTYPE html><html><body><h1>
-        In testing,<br> ID: {device_id}, <br>Current time: {time_current}.
+        In testing<br> ID: {device_id}<br>Current time: {time_current}
         </h1></body></html>'''
-        # return res
-        return Response(res,mimetype='text/html')
-#%%
+        return Response(res, mimetype='text/html')

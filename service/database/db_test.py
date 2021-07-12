@@ -20,9 +20,6 @@ def connect(user, password, db, host='여기에 입력', port='여기에 입력'
 
     return con
 #%%
-url = 'postgresql://{}:{}@{}:{}/{}'
-url = url.format(user, password, host, port, db)
-#%%
 from sqlalchemy import create_engine, MetaData
 from sqlalchemy.orm import sessionmaker
 
